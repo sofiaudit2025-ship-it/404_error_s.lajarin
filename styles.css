@@ -1,75 +1,106 @@
-/* FONDO DE PANTALLA */
 body {
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #04c82e;
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: "Jersey 10", sans-serif; /* Tu tipografía */
-}
-
-/* CONTENEDOR A PANTALLA COMPLETA */
-#vhs {
-    width: 100vw;
-    height: 100vh;
-    padding: 60px;
-
+    background: #001a82;
+   font-family: "DotGothic16", sans-serif;
     color: white;
-    position: relative;
-    text-shadow: 0 0 4px rgba(255,255,255,0.6);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
+    padding-top: 40px;
+    overflow: hidden;
 }
 
+/* --- CRT LINES --- */
+.scanlines {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        rgba(255,255,255,0.04) 0px,
+        rgba(255,255,255,0.04) 2px,
+        transparent 4px,
+        transparent 6px
+    );
+    mix-blend-mode: overlay;
+}
 
-/* -------- TOP -------- */
-#top-info {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+/* --- VHS NOISE --- */
+.noise {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('https://i.imgur.com/8fK4h2V.png');
+    opacity: 0.15;
+    pointer-events: none;
+    animation: noiseMove 0.2s infinite;
+}
 
+@keyframes noiseMove {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(-10px,3px); }
+    100% { transform: translate(4px,-2px); }
+}
+
+/* --- GLITCH TITLE --- */
+.title {
+    font-size: 70px;
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+}
+
+/* --- MENU --- */
+.menu {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.selected {
+    background: white;
+    color: black;
+    padding: 2px 6px;
+}
+
+/* --- ALIEN MESSAGE --- */
+.alien {
+    margin-top: 30px;
     font-size: 18px;
-    line-height: 1.6;
-    opacity: 0.85;
-    letter-spacing: 2px;
+    color: #83f6ff;
+    animation: flicker 1.5s infinite;
 }
 
-
-/* -------- CENTER -------- */
-#center {
-    text-align: center;
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.6; }
 }
 
-#center h1 {
-    font-size: 200px;
-    font-weight: 200;  
-    margin: 0;
-    letter-spacing: 8px;
-}
-
-#center p {
-    margin-top: 10px;
-    font-size: 90px;
-    font-weight: 200;
-    letter-spacing: 6px;
-    line-height: 2%;
-}
-
-
-/* -------- BOTTOM -------- */
-#bottom-info {
-    width: 100%;
-    text-align: center;
+/* --- RETURN BUTTON --- */
+.return {
+    margin-top: 40px;
+    text-decoration: underline;
     font-size: 20px;
-    opacity: 0.85;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.clock {
+    position: fixed;
+    bottom: 20px;   /* ahora está abajo */
+    left: 20px;     /* pegado al lado izquierdo */
+    font-size: 18px;
+    color: #fffbe6;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.2); /* panel CRT suave */
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.option {
+    padding: 2px 6px;
+    transition: 0.15s ease;
+}
+
+.option:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+    text-shadow: -2px 0 cyan, 2px 0 red; /* glitch */
+    transform: translateX(4px); /* como desplazamiento analógico */
 }
