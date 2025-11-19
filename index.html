@@ -2,44 +2,40 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 VHS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-
-    <title>Error 404</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div id="vhs">
+<div class="scanlines"></div>
+<div class="noise"></div>
 
-    <!-- TOP -->
-    <div id="top-info">
-        <div class="block">
-            TAPE A<br>
-            PLAY<br>
-            00:00:00
-        </div>
-        <div class="block" style="text-align: right;">
-            TAPE B<br>
-            STOP<br>
-            00:00:01
-        </div>
-    </div>
+<div class="title">------- ERROR 404 -------</div>
 
-    <!-- CENTER (AÚN SIN GLITCH) -->
-    <div id="center">
-        <h1>ERROR 404</h1>
-        <p>NOT FOUND</p>
-    </div>
-
-    <!-- BOTTOM -->
-    <div id="bottom-info">
-        SLP SOURCE &nbsp;&nbsp;&nbsp; SLP DEST
-    </div>
-
+<div class="menu">
+    <div class="option">SISTEMA NO ENCONTRADO</div>
+    <div class="option">REPARAR NAVE</div>
+    <div class="option">ESCANEAR SUPERFICIE</div>
+    <div class="option">LLAMAR A BASE HUMANA</div>
+    <div class="option">IDIOMA ACTUAL: HUMANO</div>
 </div>
 
-</body>
-</html>
+
+<div class="alien">
+    “HUMANO DETECTADO. TU ATERRIZAJE<br>
+    EN MARTE HA SIDO... MODERADAMENTE PATÉTICO.”
+</div>
+
+<div class="return" onclick="window.location='/'">
+    VOLVER A LA TIERRA (ACTION KEY)
+</div>
+
+<div class="clock" id="clock"></div>
+
+<script src="script.js"></script>
