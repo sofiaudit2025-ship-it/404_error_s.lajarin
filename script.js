@@ -1,17 +1,9 @@
-function glitchEffect() {
-    const vhs = document.getElementById("vhs");
-
-    vhs.classList.add("glitch");
-
-    setTimeout(() => {
-        vhs.classList.remove("glitch");
-    }, 120);
+function clock() {
+    let hour = new Date().toLocaleTimeString();
+    document.getElementById("clock").innerText =
+        "HORA DEL INCIDENTE: " + hour;
 }
 
-function loopGlitch() {
-    glitchEffect();
-    const time = 3000 + Math.random() * 2000; // entre 3 y 5 segundos
-    setTimeout(loopGlitch, time);
-}
+setInterval(clock, 1000);
+clock();
 
-loopGlitch();
