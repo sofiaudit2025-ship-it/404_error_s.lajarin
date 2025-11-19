@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Error 404 VHS</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,24 +13,32 @@
 
 <body>
 
-<div class="scanlines"></div>
-<div class="noise"></div>
 
-<div class="title">------- ERROR 404 -------</div>
+        <div class="scanlines"></div>
+        <div class="noise"></div>
+        <div class="glitch-lines"></div>
 
-<div class="menu">
-    <div class="option">SISTEMA NO ENCONTRADO</div>
-    <div class="option">REPARAR NAVE</div>
-    <div class="option">ESCANEAR SUPERFICIE</div>
-    <div class="option">LLAMAR A BASE HUMANA</div>
-    <div class="option">IDIOMA ACTUAL: HUMANO</div>
-</div>
+        <div class="title">------- ERROR 404 -------</div>
+        <div class="subtitle">SISTEMA NO ENCONTRADO</div>
+        
+    <div class="menu">
+        <div class="option">REPARAR NAVE</div>
+        <div class="option">ESCANEAR SUPERFICIE</div>
+        <div class="option">LLAMAR A BASE ALIENÍGENA</div>
+        <div class="option">IDIOMA ACTUAL: HUMANO</div>
+    </div>
 
 
-<div class="alien">
-    “HUMANO DETECTADO. TU ATERRIZAJE<br>
-    EN MARTE HA SIDO... MODERADAMENTE PATÉTICO.”
-</div>
+<!-- BOTÓN DEL CHAT -->
+    <div id="alien-button">👽</div>
+
+<!-- CHAT ALIENÍGENA -->
+    <div id="alien-chat">
+           <div class="chat-header">MENSAJE ENTRANTE DE MARTE</div>
+           <div class="chat-body">
+        HUMANO DETECTADO. <br>
+        SU ATERRIZAJE HA SIDO <br> SIMPLEMENTE PATÉTICO.</div>
+    </div>
 
 <div class="return" onclick="window.location='/'">
     VOLVER A LA TIERRA (ACTION KEY)
@@ -38,4 +46,6 @@
 
 <div class="clock" id="clock"></div>
 
-<script src="script.js"></script>
+</body>
+
+
