@@ -7,7 +7,7 @@ body {
     overflow: hidden;
 }
 
-/* --- CRT LINES --- */
+/* CRT LINES */
 .scanlines {
     position: fixed;
     top: 0; left: 0;
@@ -22,7 +22,7 @@ body {
     mix-blend-mode: overlay;
 }
 
-/* --- VHS NOISE --- */
+/* VHS NOISE*/
 .noise {
     position: fixed;
     top: 0; left: 0;
@@ -38,7 +38,7 @@ body {
     100% { transform: translate(4px,-2px); }
 }
 
-/* --- GLITCH TITLE --- */
+/* GLITCH TITLE */
 .title {
     font-size: 70px;
     margin-bottom: 100px;
@@ -128,7 +128,7 @@ body {
 }
 
 
-/* --- RETURN BUTTON --- */
+/* RETURN BUTTON  */
 .return {
     margin-top: 20px;
     font-size: 20px;
@@ -177,7 +177,7 @@ body {
 
 
 
-/* --- GLITCH LINES (tipo A) --- */
+/* GLITCH LINES  */
 .glitch-lines {
     position: fixed;
     top: 0;

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // --- RELOJ ---
+    //RELOJ
     function clock() {
         let hour = new Date().toLocaleTimeString();
         $("#clock").text("HORA DEL INCIDENTE: " + hour);
@@ -10,7 +10,7 @@ $(document).ready(function () {
     clock();
 
 
-    // --- CHAT ALIENÍGENA DESPLEGABLE ---
+    //CHAT ALIENÍGENA DESPLEGABLE 
     let open = false;
 
     $("#alien-button").on("click", function () {
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
 });
 
-// --- GLITCH LINES  ---
+// GLITCH LINES  
 function spawnThinGlitchLine() {
     const container = document.querySelector(".glitch-lines");
     if (!container) return;
