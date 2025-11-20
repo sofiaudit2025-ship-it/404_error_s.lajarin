@@ -132,20 +132,33 @@ body {
 /* --- RETURN BUTTON --- */
 .return {
     margin-top: 40px;
-    text-decoration: underline;
     font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
+    padding: 12px 22px;
+    background: #fffbe6; 
+    color:#001a82;
+    display: inline-block;
+    box-shadow: 0 0 12px rgba(255,255,255,0.45);
+    letter-spacing: 1px;
+    transition: 0.15s ease;
+}
+
+.return:hover {
+    transform: scale(1.05);
+    text-shadow: -2px 0 cyan, 2px 0 red;
+    
 }
 
 .clock {
     position: fixed;
-    bottom: 20px;   /* ahora está abajo */
-    left: 20px;     /* pegado al lado izquierdo */
+    bottom: 20px;   
+    left: 20px;     
     font-size: 18px;
     color: #fffbe6;
     opacity: 0.9;
     letter-spacing: 1px;
-    background: rgba(0, 0, 0, 0.2); /* panel CRT suave */
+    background: rgba(0, 0, 0, 0.2); 
     padding: 6px 10px;
     border-radius: 4px;
 }
@@ -159,8 +172,8 @@ body {
     background: white;
     color: black;
     cursor: pointer;
-    text-shadow: -2px 0 cyan, 2px 0 red; /* glitch */
-    transform: translateX(4px); /* como desplazamiento analógico */
+    text-shadow: -2px 0 cyan, 2px 0 red; 
+    transform: translateX(4px); 
 }
 
 
